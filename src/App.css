@@ -68,6 +68,11 @@ button {
 }
 
 .calendar-day.is-selected {
-  background: coral;
+  background: coral !important;
   color: #fff;
+}
+
+.calendar-day:hover {
+  color: #eee;
+  background: burlywood;
 }
