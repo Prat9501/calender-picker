@@ -49,10 +49,11 @@ export default function App() {
       <div className="calendar">
         {calendarDates.map((day, index) => {
           const dayNumber = day + 1;
+          let isSelected = dayNumber === startDate || dayNumber === endDate;
           return (
           <div 
             key={index}
-            className="calendar-day"
+            className={`calendar-day ${isSelected ? 'is-selected' : ''}`}
             onClick={() => updateDate(dayNumber)}
           >{dayNumber}</div>);
         })}
